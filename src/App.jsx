@@ -1,7 +1,7 @@
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./components/Homepage";
-import Products from "./components/Products"; // Example components for routing
+import Products from "./components/ProductsPage"; // Example components for routing
  import Gallery from './components/Gallery';
 // import Contact from './components/Contact';
 import AboutUs from './components/AboutUs';
