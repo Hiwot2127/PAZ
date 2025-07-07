@@ -22,125 +22,154 @@ export default function Component() {
 	const isActive = (path) => location.pathname === path;
 
 	return (
-		<header className="flex h-20 items-center justify-between bg-transparent px-8 sm:px-10 z-50 absolute top-0 left-0 w-full">
-			<Link to="/" className="flex items-center gap-4">
-				<img src="/assets/logo.png" alt="Logo" className="h-16 w-16" />
-				<span className="text-5xl font-bold text-golden-yellow">
+		<header className="flex h-16 sm:h-20 items-center justify-between bg-white/10 backdrop-blur-sm border-b border-white/20 px-4 sm:px-6 md:px-8 lg:px-10 z-50 absolute top-0 left-0 w-full animate-fade-in-up">
+			<Link to="/" className="flex items-center gap-2 sm:gap-4 hover:scale-105 transition-transform duration-300">
+				<img src="/assets/logo.png" alt="Logo" className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 hover:rotate-12 transition-transform duration-300" />
+				<span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-golden-yellow hover:text-white transition-colors duration-300">
 					PAZ TILES
 				</span>
 			</Link>
-			<nav className="hidden gap-8 sm:flex">
+			<nav className="hidden lg:flex gap-4 xl:gap-6 2xl:gap-8">
 				<Link
 					to="/"
-					className={`flex text-2xl font-bold ${isActive("/") ? "text-dark-green" : "text-golden-yellow"
-						} hover:scale-90 hover:text-white-ish transition-transform`}
+					className={`flex items-center text-lg xl:text-xl 2xl:text-2xl font-bold px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover-lift ${
+						isActive("/") 
+							? "text-dark-green bg-golden-yellow/20 backdrop-blur-sm border border-golden-yellow/30" 
+							: "text-golden-yellow hover:text-white hover:bg-white/10 backdrop-blur-sm"
+					}`}
 				>
-					<HomeIcon className="h-8 w-8 mr-2" />
-					Home
+					<HomeIcon className="h-6 w-6 xl:h-7 xl:w-7 2xl:h-8 2xl:w-8 mr-1 xl:mr-2" />
+					<span className="hidden xl:inline">Home</span>
 				</Link>
 				<Link
 					to="/about"
-					className={`flex text-2xl font-bold ${isActive("/about") ? "text-dark-green" : "text-golden-yellow"
-						} hover:scale-90 hover:text-white-ish transition-transform`}
+					className={`flex items-center text-lg xl:text-xl 2xl:text-2xl font-bold px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover-lift ${
+						isActive("/about") 
+							? "text-dark-green bg-golden-yellow/20 backdrop-blur-sm border border-golden-yellow/30" 
+							: "text-golden-yellow hover:text-white hover:bg-white/10 backdrop-blur-sm"
+					}`}
 				>
-					<InformationCircleIcon className="h-8 w-8 mr-2" />
-					About Us
+					<InformationCircleIcon className="h-6 w-6 xl:h-7 xl:w-7 2xl:h-8 2xl:w-8 mr-1 xl:mr-2" />
+					<span className="hidden xl:inline">About Us</span>
 				</Link>
 				<Link
 					to="/products"
-					className={`flex text-2xl font-bold ${isActive("/products")
-						? "text-dark-green"
-						: "text-golden-yellow"
-						} hover:scale-90 hover:text-white-ish transition-transform`}
+					className={`flex items-center text-lg xl:text-xl 2xl:text-2xl font-bold px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover-lift ${
+						isActive("/products")
+							? "text-dark-green bg-golden-yellow/20 backdrop-blur-sm border border-golden-yellow/30"
+							: "text-golden-yellow hover:text-white hover:bg-white/10 backdrop-blur-sm"
+					}`}
 				>
-					<ShoppingBagIcon className="h-8 w-8 mr-2" />
-					Products
+					<ShoppingBagIcon className="h-6 w-6 xl:h-7 xl:w-7 2xl:h-8 2xl:w-8 mr-1 xl:mr-2" />
+					<span className="hidden xl:inline">Products</span>
 				</Link>
 				<Link
 					to="/gallery"
-					className={`flex text-2xl font-bold ${isActive("/gallery")
-						? "text-dark-green"
-						: "text-golden-yellow"
-						} hover:scale-90 hover:text-white-ish transition-transform`}
+					className={`flex items-center text-lg xl:text-xl 2xl:text-2xl font-bold px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover-lift ${
+						isActive("/gallery")
+							? "text-dark-green bg-golden-yellow/20 backdrop-blur-sm border border-golden-yellow/30"
+							: "text-golden-yellow hover:text-white hover:bg-white/10 backdrop-blur-sm"
+					}`}
 				>
-					<PhotoIcon className="h-8 w-8 mr-2" />
-					Gallery
+					<PhotoIcon className="h-6 w-6 xl:h-7 xl:w-7 2xl:h-8 2xl:w-8 mr-1 xl:mr-2" />
+					<span className="hidden xl:inline">Gallery</span>
 				</Link>
 				<Link
 					to="/contact"
-					className={`flex text-2xl font-bold ${isActive("/contact")
-						? "text-dark-green"
-						: "text-golden-yellow"
-						} hover:scale-90 hover:text-white-ish transition-transform`}
+					className={`flex items-center text-lg xl:text-xl 2xl:text-2xl font-bold px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover-lift ${
+						isActive("/contact")
+							? "text-dark-green bg-golden-yellow/20 backdrop-blur-sm border border-golden-yellow/30"
+							: "text-golden-yellow hover:text-white hover:bg-white/10 backdrop-blur-sm"
+					}`}
 				>
-					<PhoneIcon className="h-8 w-8 mr-2" />
-					Contact
+					<PhoneIcon className="h-6 w-6 xl:h-7 xl:w-7 2xl:h-8 2xl:w-8 mr-1 xl:mr-2" />
+					<span className="hidden xl:inline">Contact</span>
 				</Link>
-			</nav >
+			</nav>
 			<Sheet>
 				<SheetTrigger asChild>
 					<Button
 						variant="outline"
 						size="icon"
-						className="sm:hidden text-foreground"
+						className="lg:hidden text-golden-yellow border-golden-yellow/30 bg-white/10 backdrop-blur-sm h-10 w-10 sm:h-12 sm:w-12 hover:bg-golden-yellow/20 hover:scale-110 transition-all duration-300"
 					>
-						<MenuIcon className="h-6 w-6" />
+						<MenuIcon className="h-5 w-5 sm:h-6 sm:w-6" />
 						<span className="sr-only">Toggle navigation menu</span>
 					</Button>
 				</SheetTrigger>
 				<SheetContent
 					side="left"
-					className="bg-dark-green/60 text-foreground m-0"
+					className="bg-dark-green/95 backdrop-blur-md text-foreground m-0 w-80 sm:w-96 border-r border-white/20"
 				>
-					<SheetHeader>
-						{/* <SheetTitle className="flex gap-5 h-4 pb-10 text-golden-yellow">
-							<img src="/assets/logo.png" alt="Logo" className="h-10" />
-							PAZ TERRAZZO
-						</SheetTitle> */}
+					<SheetHeader className="pb-6">
+						<div className="flex items-center gap-3">
+							<img src="/assets/logo.png" alt="Logo" className="h-8 w-8 sm:h-10 sm:w-10 hover:rotate-12 transition-transform duration-300" />
+							<span className="text-xl sm:text-2xl font-bold text-golden-yellow">PAZ TERRAZZO</span>
+						</div>
 						<SheetDescription />
 					</SheetHeader>
-					<div className="grid gap-4 p-4">
-						<nav className="grid gap-2">
+					<div className="grid gap-3 p-4">
+						<nav className="grid gap-3">
 							<Link
 								to="/"
-								className="flex items-center gap-2 rounded-md px-3 py-2 bg-primary text-xl font-medium hover:bg-dark-green/70 hover:text-primary text-accent"
+								className={`flex items-center gap-3 rounded-lg px-4 py-3 text-lg sm:text-xl font-medium transition-all duration-300 hover:scale-105 hover-lift ${
+									isActive("/")
+										? "bg-golden-yellow/20 text-golden-yellow border border-golden-yellow/30"
+										: "bg-white/10 text-white hover:bg-golden-yellow/20 hover:text-golden-yellow"
+								}`}
 							>
-								<HomeIcon className="h-8 w-8 mr-2" />
+								<HomeIcon className="h-6 w-6 sm:h-8 sm:w-8" />
 								Home
 							</Link>
 							<Link
 								to="/about"
-								className="flex items-center gap-2 rounded-md px-3 py-2 bg-primary text-xl font-medium hover:bg-dark-green/70 hover:text-primary text-accent"
+								className={`flex items-center gap-3 rounded-lg px-4 py-3 text-lg sm:text-xl font-medium transition-all duration-300 hover:scale-105 hover-lift ${
+									isActive("/about")
+										? "bg-golden-yellow/20 text-golden-yellow border border-golden-yellow/30"
+										: "bg-white/10 text-white hover:bg-golden-yellow/20 hover:text-golden-yellow"
+								}`}
 							>
-								<InformationCircleIcon className="h-8 w-8 mr-2" />
+								<InformationCircleIcon className="h-6 w-6 sm:h-8 sm:w-8" />
 								About Us
 							</Link>
 							<Link
 								to="/products"
-								className="flex items-center gap-2 rounded-md px-3 py-2 bg-primary text-xl font-medium hover:bg-dark-green/70 hover:text-primary text-accent"
+								className={`flex items-center gap-3 rounded-lg px-4 py-3 text-lg sm:text-xl font-medium transition-all duration-300 hover:scale-105 hover-lift ${
+									isActive("/products")
+										? "bg-golden-yellow/20 text-golden-yellow border border-golden-yellow/30"
+										: "bg-white/10 text-white hover:bg-golden-yellow/20 hover:text-golden-yellow"
+								}`}
 							>
-								<ShoppingBagIcon className="h-8 w-8 mr-2" />
+								<ShoppingBagIcon className="h-6 w-6 sm:h-8 sm:w-8" />
 								Products
 							</Link>
 							<Link
 								to="/gallery"
-								className="flex items-center gap-2 rounded-md px-3 py-2 bg-primary text-xl font-medium hover:bg-dark-green/70 hover:text-primary text-accent"
+								className={`flex items-center gap-3 rounded-lg px-4 py-3 text-lg sm:text-xl font-medium transition-all duration-300 hover:scale-105 hover-lift ${
+									isActive("/gallery")
+										? "bg-golden-yellow/20 text-golden-yellow border border-golden-yellow/30"
+										: "bg-white/10 text-white hover:bg-golden-yellow/20 hover:text-golden-yellow"
+								}`}
 							>
-								<PhotoIcon className="h-8 w-8 mr-2" />
+								<PhotoIcon className="h-6 w-6 sm:h-8 sm:w-8" />
 								Gallery
 							</Link>
 							<Link
 								to="/contact"
-								className="flex items-center gap-2 rounded-md px-3 py-2 bg-primary text-xl font-medium hover:bg-dark-green/70 hover:text-primary text-accent"
+								className={`flex items-center gap-3 rounded-lg px-4 py-3 text-lg sm:text-xl font-medium transition-all duration-300 hover:scale-105 hover-lift ${
+									isActive("/contact")
+										? "bg-golden-yellow/20 text-golden-yellow border border-golden-yellow/30"
+										: "bg-white/10 text-white hover:bg-golden-yellow/20 hover:text-golden-yellow"
+								}`}
 							>
-								<PhoneIcon className="h-8 w-8 mr-2" />
+								<PhoneIcon className="h-6 w-6 sm:h-8 sm:w-8" />
 								Contact
 							</Link>
 						</nav>
 					</div>
 				</SheetContent>
 			</Sheet>
-		</header >
+		</header>
 	);
 }
 

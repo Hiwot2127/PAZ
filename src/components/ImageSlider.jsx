@@ -8,6 +8,7 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useState } from "react";
 
 const socialMediaLinks = [
 	{ url: "https://www.facebook.com", icon: facebookIcon },
@@ -15,7 +16,16 @@ const socialMediaLinks = [
 	{ url: "https://www.instagram.com", icon: instagramIcon },
 ];
 
-const ImageSlider = () => {
+const ImageSlider = ({ onSlideChange }) => {
+	const [currentSlide, setCurrentSlide] = useState(0);
+
+	const handleSlideChange = (index) => {
+		setCurrentSlide(index);
+		if (onSlideChange) {
+			onSlideChange(index);
+		}
+	};
+
 	return (
 		<Carousel
 			opts={{
@@ -28,6 +38,7 @@ const ImageSlider = () => {
 				}),
 			]}
 			className="w-screen h-screen relative"
+			onSlideChange={handleSlideChange}
 		>
 			<CarouselContent className="h-full">
 				{images.map((image, index) => (

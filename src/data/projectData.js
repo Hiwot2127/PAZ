@@ -1,0 +1,28 @@
+// Project images data
+export const projectData = [
+    { id: 1, img: "/assets/photo_1.jpg" },
+    { id: 2, img: "/assets/photo_2.jpg" },
+    { id: 3, img: "/assets/photo_3.jpg" },
+    { id: 4, img: "/assets/photo_4.jpg" },
+    { id: 5, img: "/assets/photo_5.jpg" },
+    { id: 6, img: "/assets/photo_6.jpg" },
+    { id: 7, img: "/assets/photo_7.jpg" },
+    { id: 8, img: "/assets/photo_8.jpg" },
+    // New project images p1-p16
+    { id: 9, img: "/assets/p1.jpg" },
+    { id: 10, img: "/assets/p2.jpg" },
+    { id: 11, img: "/assets/p3.jpg" },
+    { id: 12, img: "/assets/p4.jpg" },
+    { id: 13, img: "/assets/p5.jpg" },
+    { id: 14, img: "/assets/p6.jpg" },
+    { id: 15, img: "/assets/p7.jpg" },
+    { id: 16, img: "/assets/p8.jpg" },
+    { id: 17, img: "/assets/p9.jpg" },
+    { id: 18, img: "/assets/p10.jpg" },
+    { id: 19, img: "/assets/p11.jpg" },
+    { id: 20, img: "/assets/p12.jpg" },
+    { id: 21, img: "/assets/p13.jpg" },
+    { id: 22, img: "/assets/p14.jpg" },
+    { id: 23, img: "/assets/p15.jpg" },
+    { id: 24, img: "/assets/p16.jpg" },
+]; 
