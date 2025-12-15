@@ -9,6 +9,19 @@ const Category = ({ data, setFilter }) => {
 	const [selectedColor, setSelectedColor] = useState([]);
 	const [colorSet, setColorSet] = useState(() => new Set([]))
 
+	// Helper to convert hex color to rgba with configurable alpha for softer backgrounds
+	const hexToRgba = (hex, alpha = 0.25) => {
+		if (!hex) return `rgba(0,0,0,${alpha})`;
+		let h = hex.replace('#', '');
+		if (h.length === 3) {
+			h = h.split('').map((c) => c + c).join('');
+		}
+		const r = parseInt(h.substring(0, 2), 16);
+		const g = parseInt(h.substring(2, 4), 16);
+		const b = parseInt(h.substring(4, 6), 16);
+		return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+	};
+
 	const pipe = (...fns) => (initialValue) => {
 		return fns.reduce((acc, fn) => fn(acc), initialValue);
 	};
@@ -63,7 +76,12 @@ const Category = ({ data, setFilter }) => {
 								<Badge 
 									key={color}
 									className="text-xs px-2 py-1 cursor-pointer hover:scale-110 transition-all duration-300"
-									style={{ backgroundColor: colorItem?.hex, color: colorItem?.hexBack }}
+									style={{
+										backgroundColor: hexToRgba(colorItem?.hex, 0.25),
+										color: colorItem?.hexBack,
+										border: `1px solid ${colorItem?.hex}`,
+										backdropFilter: 'blur(2px)'
+									}}
 									onClick={() => handleColorToggle(color)}
 								>
 									{color} ×
@@ -92,7 +110,12 @@ const Category = ({ data, setFilter }) => {
 						>
 							<Badge 
 								className="w-full text-center py-2 font-medium border border-white/20 hover:border-golden-yellow/40 transition-all duration-300 hover:scale-105" 
-								style={{ backgroundColor: filterdItem.hex, color: filterdItem.hexBack }}
+								style={{
+									backgroundColor: hexToRgba(filterdItem.hex, 0.25),
+									color: filterdItem.hexBack,
+									borderColor: filterdItem.hex,
+									backdropFilter: 'blur(2px)'
+								}}
 							>
 								{filterdItem.color}
 							</Badge>

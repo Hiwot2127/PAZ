@@ -53,7 +53,7 @@ const Contact = () => {
               PAZ TERRAZZO
             </h1>
             <h2 className="text-xl md:text-2xl lg:text-3xl text-golden-yellow mb-6" style={{ fontFamily: '"Oswald", sans-serif' }}>
-              " LET'S PAVE YOUR PATH "
+              ELEVATING FLOORS 
             </h2>
             <div className="w-24 h-1 bg-golden-yellow rounded-full"></div>
           </div>

@@ -42,6 +42,12 @@ const AboutUs = () => {
               </p>
             </div>
 
+            {/* Hero Tagline */}
+            <div className="glass rounded-2xl p-6 sm:p-8 mb-8 border border-white/20 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <h2 className="text-2xl sm:text-3xl font-bold text-golden-yellow text-center mb-2">PAZ Tiles – Engineered for Beauty</h2>
+              <p className="text-white/80 text-center">At PAZ Tiles, every product is engineered for beauty, strength, and timeless value.</p>
+            </div>
+
             {/* Main Content Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
               {/* Image Section */}
@@ -70,7 +76,7 @@ const AboutUs = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold text-golden-yellow">Our Story</h2>
                   </div>
                   <p className="text-base sm:text-lg text-white/90 leading-relaxed text-center">
-                    Paz Tiles and Terrazzo is revolutionizing the Ethiopian tiles and terrazzo industry. We offer the finest affordable terrazzo with unmatched Italian quality, known for its exceptional durability and timeless beauty. Whether it&apos;s for homes, commercial buildings or large-scale infrastructure projects, we deliver a wide range of tile and terrazzo products designed to meet every need.
+                    PAZ Tiles is a proudly Ethiopian tile manufacturer specializing in terrazzo and engineered stone solutions. With precision, craftsmanship, and engineering expertise, we produce tiles and stoneworks that bring durability and beauty to homes, commercial spaces, and large projects.
                   </p>
                 </div>
 
@@ -87,6 +93,34 @@ const AboutUs = () => {
                   <p className="text-base sm:text-lg text-white/90 leading-relaxed text-center">
                     To provide high-quality, durable, and aesthetically pleasing tiles and terrazzo products that meet the diverse needs of our customers, while maintaining the highest standards of Italian craftsmanship and innovation.
                   </p>
+                </div>
+
+                {/* Our Products */}
+                <div className="glass rounded-2xl p-6 sm:p-8 transform transition-all duration-500 hover:scale-105 hover-lift border border-white/20">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-golden-yellow text-center mb-4">Our Products</h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Floor &amp; Wall Tiles</h3>
+                      <ul className="text-white/85 space-y-2 list-disc list-inside">
+                        <li>40×40 cm Terrazzo Tiles – Classic size, ideal for flooring in homes, offices, and schools.</li>
+                        <li>40×30×2 cm Tiles – A versatile choice for both walls and floors.</li>
+                        <li>20×20×2 cm Tiles – Perfect for decorative layouts, borders, and creative designs.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Architectural Stoneworks</h3>
+                      <ul className="text-white/85 space-y-2 list-disc list-inside">
+                        <li>Stairs (custom terrazzo slabs) – Strong, non-slip finish for residential and commercial staircases.</li>
+                        <li>Door Sills &amp; Window Sills – Precision-crafted to add durability and a refined finish.</li>
+                        <li>Slabs
+                          <ul className="mt-2 ml-5 list-disc space-y-1">
+                            <li>130×50×3 cm – Large format for staircases, thresholds, or countertops.</li>
+                            <li>120×60×3 cm – Wide slabs suitable for both flooring and architectural projects.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Why Choose Us */}
@@ -110,9 +144,9 @@ const AboutUs = () => {
                           className="w-10 h-10 sm:w-12 sm:h-12"
                         />
                       </div>
-                      <h3 className="text-lg sm:text-xl font-bold mb-3 text-golden-yellow group-hover:text-white transition-colors duration-300">Italian Craftsmanship</h3>
+                      <h3 className="text-lg sm:text-xl font-bold mb-3 text-golden-yellow group-hover:text-white transition-colors duration-300">Durability &amp; Strength</h3>
                       <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-                        Crafted with the finest Italian techniques, ensuring unparalleled quality and beauty.
+                        Built to last, even in high-traffic areas.
                       </p>
                     </div>
 
@@ -125,9 +159,9 @@ const AboutUs = () => {
                           className="w-10 h-10 sm:w-12 sm:h-12"
                         />
                       </div>
-                      <h3 className="text-lg sm:text-xl font-bold mb-3 text-golden-yellow group-hover:text-white transition-colors duration-300">Affordable Prices</h3>
+                      <h3 className="text-lg sm:text-xl font-bold mb-3 text-golden-yellow group-hover:text-white transition-colors duration-300">Elegant Terrazzo Finish</h3>
                       <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-                        Competitive pricing without compromising on quality or craftsmanship.
+                        Timeless design with marble and stone aggregates.
                       </p>
                     </div>
 
@@ -140,13 +174,29 @@ const AboutUs = () => {
                           className="w-10 h-10 sm:w-12 sm:h-12"
                         />
                       </div>
-                      <h3 className="text-lg sm:text-xl font-bold mb-3 text-golden-yellow group-hover:text-white transition-colors duration-300">Custom Designs</h3>
+                      <h3 className="text-lg sm:text-xl font-bold mb-3 text-golden-yellow group-hover:text-white transition-colors duration-300">Custom Options</h3>
                       <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-                        Custom design options to meet the unique needs of each project.
+                        Tailored cuts and patterns for your project needs.
+                      </p>
+                    </div>
+                    {/* Complete Solutions */}
+                    <div className="flex flex-col items-center text-center group">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-golden-yellow/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <img
+                          src="/assets/construction.png"
+                          alt="Complete Solutions"
+                          className="w-10 h-10 sm:w-12 sm:h-12"
+                        />
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-bold mb-3 text-golden-yellow group-hover:text-white transition-colors duration-300">Complete Solutions</h3>
+                      <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+                        From tiles to stairs, sills, and slabs—PAZ offers a full package.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* Tagline Options removed as requested */}
               </div>
             </div>
 
@@ -162,11 +212,11 @@ const AboutUs = () => {
                   <div className="text-white/80 text-sm sm:text-base">Projects Completed</div>
                 </div>
                 <div className="glass rounded-xl p-6 text-center border border-white/20 hover:scale-105 transition-transform duration-300">
-                  <div className="text-3xl sm:text-4xl font-bold text-golden-yellow mb-2">50+</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-golden-yellow mb-2">25+</div>
                   <div className="text-white/80 text-sm sm:text-base">Product Varieties</div>
                 </div>
                 <div className="glass rounded-xl p-6 text-center border border-white/20 hover:scale-105 transition-transform duration-300">
-                  <div className="text-3xl sm:text-4xl font-bold text-golden-yellow mb-2">10+</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-golden-yellow mb-2">5+</div>
                   <div className="text-white/80 text-sm sm:text-base">Years Experience</div>
                 </div>
               </div>

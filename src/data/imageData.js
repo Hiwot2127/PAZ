@@ -1,8 +1,8 @@
 export const images = [
 	{
 		src: "/assets/trial image-4.png",
-		topText: "MODERN GRANITE AND TERRAZZO",
-		bottomText: 'PAVING YOUR PATH',
+		topText: "MODERN TERRAZO TILES",
+		bottomText: 'ELEVATING FLOORS',
 	},
 	{
 		src: "/assets/devine.jpg.webp",

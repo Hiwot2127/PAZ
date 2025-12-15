@@ -15,7 +15,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="text-center md:text-left">
               <h3 className="text-2xl font-bold text-golden-yellow mb-4">PAZ TERRAZZO</h3>
-              <p className="text-white/80 mb-4">"LET'S PAVE YOUR PATH"</p>
+              <p className="text-white/80 mb-4">Engineered for Beauty</p>
               <p className="text-white/60 text-sm">
                 Premium tiles and terrazzo solutions for your dream projects.
               </p>
